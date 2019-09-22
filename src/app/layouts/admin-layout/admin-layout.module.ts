@@ -7,6 +7,7 @@ import { DashboardComponent } from '../../components/dashboard/dashboard.compone
 import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { SignInComponent } from '../../components/signin/signin.component';
 
 @NgModule({
   imports: [
@@ -15,10 +16,12 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ChartsModule,
     NgbModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    SignInComponent
    
   ]
 })
