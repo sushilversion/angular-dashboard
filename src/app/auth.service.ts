@@ -13,6 +13,10 @@ export class AuthService {
   }
 
   public isSignedIn() {
+      //@TODO- Hard Code
+      return true;
+      console.log("isSignedIn: ",!!this.session.accessToken);
+      
     return !!this.session.accessToken;
   }
 
@@ -21,11 +25,15 @@ export class AuthService {
   }
 
   public doSignIn(accessToken: string, name: string) {
+     // console.log(accessToken,name);
+      
     if ((!accessToken) || (!name)) {
       return;
     }
+    
     this.session.accessToken = accessToken;
     this.session.name = name;
+   // console.log(this.session.accessToken,this.session.name);
   }
 
 }
